@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background: #ffda70;
+}
+
+
+.wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.wrapper .gender_wrap{
+	padding: 25px;
+}
+
+
+.wrapper .gender_wrap h2{
+	color: #7690da;
+	margin-bottom: 15px;
+}
+
+.gender_wrap .lradio_container{
+	display:block;
+	position:relative;
+	width:100%;
+	height:auto;
+	margin-bottom:15px;
+}
+
+.gender_wrap .lradio_container .input_radio{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+}
+
+.gender_wrap .lradio_container .radio_inner{
+	display:flex;
+	align-items:center;
+	padding:12px 10px;
+	background:#fff;
+	border-radius: 5px;
+	padding: 30px;
+}
+
+.gender_wrap .lradio_container .checkmark{
+	background: url('radio-btns.png') no-repeat 0 0;
+	width: 60px;
+	height: 60px;
+	margin-right:15px;
+	position:relative;
+}
+
+.gender_wrap .lradio_container.male .gender_icon{
+	background: url('gender-radio.png') no-repeat 0 -334px;
+	width: 100px;
+	height: 128px;
+}
+
+.gender_wrap .lradio_container.female .gender_icon{
+	background: url('gender-radio.png') no-repeat 0 0;
+	width: 106px;
+	height: 128px;
+}
+
+.gender_wrap .lradio_container .gender_icon{
+	margin: 0 50px;
+}
+
+.gender_wrap .lradio_container .info{
+	font-size: 32px;
+	font-weight: 700;
+	color: #e6edfd;
+}
+
+.lradio_container .input_radio:checked ~ .radio_inner .checkmark{
+	background: url('radio-btns.png') no-repeat 0 -64px;
+}
+
+.lradio_container.male .input_radio:checked ~ .radio_inner .gender_icon{
+	background: url('gender-radio.png') no-repeat 0 -500px;
+}
+
+.lradio_container.female .input_radio:checked ~ .radio_inner .gender_icon{
+	background: url('gender-radio.png') no-repeat 0 -167px;
+}
+
+.lradio_container .input_radio:checked ~ .radio_inner .info{
+	color: #7690da;
+}
+
+.lradio_container .input_radio:checked ~ .radio_inner{
+	box-shadow: 0 0 5px rgba(118,144,218,0.5);
+}
